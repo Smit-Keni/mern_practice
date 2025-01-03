@@ -12,8 +12,8 @@ app.use(express.json());
 app.use("/api/products",productRoutes)
 
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT,()=>{
     connectDB();
-    console.log("Server started at localhost 5000");
+    console.log(`Server started at http://localhost:`+ process.env.PORT );
 });
 
