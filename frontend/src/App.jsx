@@ -1,4 +1,4 @@
-import { Box, Container} from "@chakra-ui/react"
+import { Box, Container, useColorModeValue} from "@chakra-ui/react"
 import Homepage from "./Pages/Homepage";
 import CreatePage from "./Pages/CreatePage";
 import Navbar from "./components/Navbar";
@@ -10,9 +10,9 @@ function App() {
  
 
   return (
-    <Box minH={"100vh"}>
+    <Box minH={"100vh"} bg={useColorModeValue("gray.50","gray.900")}>
       <Navbar/>
-      <Container maxW={"1140px"} px={4}>
+      <Container>
         <Routes>
           <Route path="/" element={<Homepage />}/>
           <Route path="/create" element={<CreatePage />}/>
